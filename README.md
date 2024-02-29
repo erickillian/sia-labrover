@@ -33,5 +33,10 @@ astrauvc
 ```
 show up
 
+you can then run 
 
+```
+~/run_docker.sh
+```
 
+This will run a docker image inside linux that is running ROS2
