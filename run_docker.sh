@@ -2,6 +2,7 @@
 xhost +
 
 docker run -it \
+--restart always \
 --net=host \
 --env="DISPLAY" \
 --env="QT_X11_NO_MITSHM=1" \

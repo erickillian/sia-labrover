@@ -46,7 +46,7 @@ you can then run
 
 This will run a docker image inside linux that is running ROS2
 
-Next close out of this.
+Next close out of this docker image.
 
 There are some issues with things running inside this docker container so modifications needed to be made.  I made a custom Dockerfile which runs these modifications
 
@@ -59,15 +59,18 @@ cd sia-labrover
 docker build -t my-custom-ros-foxy .
 ```
 
+This will build a new docker image called my-custom-ros-foxy that makes some updates
+
 You can then run 
 
 ```
 ~/sia-labrover/run_modified_docker.sh
 ```
 
-which will run the revised ROS2 image.
+which will run the revised ROS2 image as a daemon.
 
-
-
-
+To connect to a terminal inside the ROS2 docker image run 
+```
+docker exec my-custom-ros-foxy -it /bin/bash
+```
 
