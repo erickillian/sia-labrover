@@ -1,7 +1,7 @@
 # sia-labrover
 Code for the SIA Lab ROSMASTER R2 setup
 
-## ROS2 Setup
+## ROS2 Setup for the Yahboom ROSMASTER R2
 
 This device came with ROS1 melodic pre-installed in an environment
 
