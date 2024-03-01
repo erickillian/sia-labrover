@@ -17,7 +17,11 @@ There is an app startup that runs, first disable this.
 
 Open Ubuntu system applications, search Startup Applications, remove the check mark in front of start_rosmaster_app as shown in the following figure to close the large program permanently.
 
-Next run the docker container on the image to start ROS2.  
+Next run the docker container on the image to start ROS2.
+
+```
+~/run_docker.sh
+```
 
 I was running into issues where the /dev/astradepth device could not be found.  If you run into this issue unplug and replug the camera and this device should show up.  To make sure run 
 
@@ -39,4 +43,31 @@ you can then run
 ~/run_docker.sh
 ```
 
+
 This will run a docker image inside linux that is running ROS2
+
+Next close out of this.
+
+There are some issues with things running inside this docker container so modifications needed to be made.  I made a custom Dockerfile which runs these modifications
+
+now clone this repo onto the jetson
+
+```
+cd ~
+git clone https://github.com/erickillian/sia-labrover.git
+cd sia-labrover
+docker build -t my-custom-ros-foxy .
+```
+
+You can then run 
+
+```
+~/sia-labrover/run_modified_docker.sh
+```
+
+which will run the revised ROS2 image.
+
+
+
+
+
