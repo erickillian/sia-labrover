@@ -71,6 +71,6 @@ which will run the revised ROS2 image as a daemon.
 
 To connect to a terminal inside the ROS2 docker image run 
 ```
-docker exec my-custom-ros-foxy -it /bin/bash
+docker exec -it my-custom-ros-foxy /bin/bash
 ```
 
