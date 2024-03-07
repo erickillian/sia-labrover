@@ -20,4 +20,4 @@ docker run -d \
 --device=/dev/video0 \
 -p 9090:9090 \
 -p 8888:8888 \
-my-custom-ros-foxy /bin/bash
+my-custom-ros-foxy tail -f /dev/null
