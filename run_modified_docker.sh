@@ -3,6 +3,7 @@ xhost +
 
 docker run -d \
 --name="my-custom-ros-foxy" \
+--restart="always" \
 --net=host \
 --env="DISPLAY" \
 --env="QT_X11_NO_MITSHM=1" \
