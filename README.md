@@ -61,8 +61,12 @@ docker build -t my-custom-ros-foxy .
 
 This will build a new docker image called my-custom-ros-foxy that makes some updates
 
-You can then run 
+To start the modified docker container run
+```
+~/sia-labrover/run_modified_docker.sh
+```
 
+To stop the modified docker container run
 ```
 ~/sia-labrover/run_modified_docker.sh
 ```
