@@ -8,8 +8,6 @@ docker run -d \
 --env="DISPLAY" \
 --env="QT_X11_NO_MITSHM=1" \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
-# -v /home/jetson/temp:/root/yahboomcar_ros2_ws/temp \
-# -v /home/jetson/sia-lab-workspace:/root/yahboomcar_ros2_ws/sia-lab-workspace \
 -v /home/jetson/rosboard:/root/rosboard \
 -v /home/jetson/maps:/root/maps \
 -v /dev/bus/usb/001/012:/dev/bus/usb/001/012 \
