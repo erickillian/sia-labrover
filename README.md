@@ -68,7 +68,7 @@ To start the modified docker container run
 
 To stop the modified docker container run
 ```
-~/sia-labrover/run_modified_docker.sh
+~/sia-labrover/stop_modified_docker.sh
 ```
 
 which will run the revised ROS2 image as a daemon.

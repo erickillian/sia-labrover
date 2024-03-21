@@ -1,0 +1,14 @@
+<launch>
+	<arg name="robot_name" default="robot1"/>
+	<arg name="robot_type" default="$(env ROBOT_TYPE)"/>
+	<group>
+		<push-ros-namespace namespace="$(var robot_name)"/>
+		<!--driver_node-->
+		<node name="driver" pkg="yahboomcar_bringup" exec="Mcnamu_driver_X3" output="screen" >
+            <env name="robot_type" value="x1"/>
+            <param name="imu_link" value="$(var robot_name)/imu_link"/>
+            <remap from="cmd_vel" to="/cmd_vel"/>
+        </node>
+	</group>
+    <!--include file="$(find-pkg-share yahboomcar_description)/launch/description_multi_$(var robot_name).launch.py"/-->
+</launch>

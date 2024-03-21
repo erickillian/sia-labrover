@@ -1,0 +1,15 @@
+<launch>
+	<arg name="robot_name" default="robot1"/>
+	<group>
+		<push-ros-namespace namespace="$(var robot_name)"/>
+		<!--driver_node-->
+		<node name="sllidar_node" pkg="sllidar_ros2" exec="sllidar_node" output="screen">
+            <param name="frame_id" value="$(var robot_name)/laser"/>
+            <param name="serial_port" value="/dev/rplidar"/>
+            <param name="serial_baudrate" value="115200"/>
+            <param name="inverted" value="false"/>
+            <param name="angle_compensate" value="true"/>
+            <param name="scan_topic" value="scan"/>
+        </node>
+	</group>
+</launch>
