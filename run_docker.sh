@@ -18,6 +18,7 @@ docker run -it \
 --device=/dev/astradepth \
 --device=/dev/astrauvc \
 --device=/dev/video0 \
+--device=/dev \
 -p 9090:9090 \
 -p 8888:8888 \
 yahboomtechnology/ros-foxy:4.0.0 /bin/bash
