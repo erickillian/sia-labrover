@@ -48,7 +48,7 @@ This will run a docker image inside linux that is running ROS2
 
 Next close out of this docker image.
 
-There are some issues with things running inside this docker container so modifications needed to be made.  I made a custom Dockerfile which runs these modifications
+There are some issues with things running inside this docker container so modifications needed to be made.  I made a custom Dockerfile which runs these modifications as well as a custom volume inside the docker container to store any custom code which we might want to run.
 
 now clone this repo onto the jetson
 
@@ -78,3 +78,22 @@ To connect to a terminal inside the ROS2 docker image run
 docker exec -it my-custom-ros-foxy /bin/bash
 ```
 
+Or you can just run 
+```
+~/sia-labrover/enter_docker.sh
+```
+
+Next in an attempt to see things working you can run yahbooms [Ackman Driver](./yahboomcar_ros2_ws/yahboomcar_ws/src/yahboomcar_bringup/yahboomcar_bringup/Ackman_driver_R2.py) 
+
+
+First enter the docker container and then run
+```
+ros2 run yahboomcar_bringup Ackman_driver_R2
+```
+
+To use [keyboard control](./yahboomcar_ros2_ws/yahboomcar_ws/src/yahboomcar_ctrl/yahboomcar_ctrl/yahboom_keyboard.py) then run 
+```
+ros2 run yahboomcar_ctrl yahboom_keyboard
+```
+
+For info on how the keyboard controls work see [ROSMASTER site](http://www.yahboom.net/study/ROSMASTER-R2) section 22.3.2 Keyboard control for more info.
