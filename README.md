@@ -103,3 +103,10 @@ ros2 run yahboomcar_ctrl yahboom_keyboard
 ```
 
 For info on how the keyboard controls work see [ROSMASTER site](http://www.yahboom.net/study/ROSMASTER-R2) section 22.3.2 Keyboard control for more info.
+
+
+# Yahboom ROSMASTER R2 Hardware control
+
+It seems that all hardware control including turning on motors, LED lightbar, and servos go through the Rosmaster_lib python package and the code can be found [here](yahboomcar_ros2_ws/software/py_install_V3.3.1/Rosmaster_Lib/Rosmaster_Lib.py)
+
+To test this package some testing scripts were made [here](./sia-lab-workspace/hardware-tests/)
