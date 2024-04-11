@@ -34,7 +34,7 @@ def main():
         time.sleep(2)
         test_pwm_servo(rosmaster, servo_id, 0)  # Min position
         time.sleep(2)
-        test_pwm_servo(rosmaster, servo_id, 180)  # Max position
+        test_pwm_servo(rosmaster, servo_id, 90)  # Max position
         time.sleep(2)
 
     # Test all PWM servos simultaneously
