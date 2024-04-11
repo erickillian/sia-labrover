@@ -5,6 +5,10 @@ Code for the SIA Lab ROSMASTER R2 setup
 
 This device came with ROS1 melodic pre-installed in an environment
 
+The setup instructions from yahboom can be viewed here [http://www.yahboom.net/study/ROSMASTER-R2](http://www.yahboom.net/study/ROSMASTER-R2) section 19.9-1
+
+In the case you want a quick summary you can simply do the following to flash yahbooms ROS2 image:
+
 First unplug the yahboom USB.  Next install a ROS2 image on the usb.
 
 the ROS2 Image can be installed here [ROS2 ROSMASTER R2](https://drive.google.com/drive/folders/1nyf-BhgrBftryZCUAIYJwh2Tsl45R1Ju?usp=drive_link)
@@ -46,7 +50,9 @@ you can then run
 
 This will run a docker image inside linux that is running ROS2
 
-Next close out of this docker image.
+Next close out of this docker image, as this is just to verify that docker is working on the device.
+
+# ROS2 Custom Docker Setup
 
 There are some issues with things running inside this docker container so modifications needed to be made.  I made a custom Dockerfile which runs these modifications as well as a custom volume inside the docker container to store any custom code which we might want to run.
 
